@@ -1,0 +1,27 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    status_active:
+        label: indikator.marketing::lang.button.active
+        type: checkbox
+        conditions: status = 1
+
+    status_inactive:
+        label: indikator.marketing::lang.button.inactive
+        type: checkbox
+        conditions: status = 2
+
+    client:
+        label: indikator.marketing::lang.form.client
+        modelClass: Indikator\Marketing\Models\Client
+        nameFrom: name
+        conditions: client_id in (:filtered)
+
+    project:
+        label: indikator.marketing::lang.form.project
+        modelClass: Indikator\Marketing\Models\Project
+        nameFrom: name
+        conditions: project_id in (:filtered)

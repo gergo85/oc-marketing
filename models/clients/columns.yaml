@@ -1,0 +1,40 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    name:
+        label: indikator.marketing::lang.form.name
+        searchable: true
+
+    address:
+        label: indikator.marketing::lang.form.address
+        searchable: true
+        invisible: true
+
+    contact_tel:
+        label: indikator.marketing::lang.form.contact_tel
+        searchable: true
+
+    contact_email:
+        label: indikator.marketing::lang.form.contact_email
+        searchable: true
+
+    common:
+        label: indikator.marketing::lang.form.common
+        searchable: true
+        invisible: true
+
+    created_at:
+        label: indikator.marketing::lang.form.created
+        searchable: true
+        type: datetime
+        format: Y-m-d G:i
+
+    updated_at:
+        label: indikator.marketing::lang.form.updated
+        searchable: true
+        invisible: true
+        type: datetime
+        format: Y-m-d G:i

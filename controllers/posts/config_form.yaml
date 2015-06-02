@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: indikator.marketing::lang.title.posts
+form: @/plugins/indikator/marketing/models/posts/fields.yaml
+modelClass: Indikator\Marketing\Models\Posts
+defaultRedirect: indikator/marketing/posts
+
+create:
+    redirect: indikator/marketing/posts
+    redirectClose: indikator/marketing/posts
+
+update:
+    redirect: indikator/marketing/posts
+    redirectClose: indikator/marketing/posts

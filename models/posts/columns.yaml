@@ -1,0 +1,49 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    title:
+        label: indikator.marketing::lang.form.title
+        searchable: true
+
+    url:
+        label: indikator.marketing::lang.form.url
+        searchable: true
+        invisible: true
+
+    project_id:
+        label: indikator.marketing::lang.form.project
+        searchable: true
+        type: partial
+        path: @/plugins/indikator/marketing/models/posts/_project.htm
+
+    lang:
+        label: indikator.marketing::lang.form.lang
+        searchable: true
+        invisible: true
+
+    feedback:
+        label: indikator.marketing::lang.form.feedback
+        searchable: true
+        type: partial
+        path: @/plugins/indikator/marketing/models/posts/_feedback.htm
+
+    common:
+        label: indikator.marketing::lang.form.common
+        searchable: true
+        invisible: true
+
+    created_at:
+        label: indikator.marketing::lang.form.created
+        searchable: true
+        type: datetime
+        format: Y-m-d G:i
+
+    updated_at:
+        label: indikator.marketing::lang.form.updated
+        searchable: true
+        invisible: true
+        type: datetime
+        format: Y-m-d G:i

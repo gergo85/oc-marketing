@@ -1,0 +1,7 @@
+1.0.0:
+    - First version of Marketing Manager.
+    - create_tasks_table.php
+    - create_ads_table.php
+    - create_posts_table.php
+    - create_projects_table.php
+    - create_clients_table.php

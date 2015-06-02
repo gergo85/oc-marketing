@@ -1,0 +1,63 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    name:
+        label: indikator.marketing::lang.form.name
+        searchable: true
+
+    client_id:
+        label: indikator.marketing::lang.form.client
+        searchable: true
+        type: partial
+        path: @/plugins/indikator/marketing/models/projects/_client.htm
+
+    task:
+        label: indikator.marketing::lang.form.task
+        searchable: true
+        invisible: true
+
+    goal:
+        label: indikator.marketing::lang.form.goal
+        searchable: true
+        invisible: true
+
+    start:
+        label: indikator.marketing::lang.form.start
+        searchable: true
+        type: datetime
+        format: Y-m-d
+
+    end:
+        label: indikator.marketing::lang.form.end
+        searchable: true
+        invisible: true
+        type: datetime
+        format: Y-m-d
+
+    common:
+        label: indikator.marketing::lang.form.common
+        searchable: true
+        invisible: true
+
+    user_id:
+        label: indikator.marketing::lang.form.user
+        searchable: true
+        invisible: true
+        type: partial
+        path: @/plugins/indikator/marketing/models/projects/_user.htm
+
+    created_at:
+        label: indikator.marketing::lang.form.created
+        searchable: true
+        type: datetime
+        format: Y-m-d G:i
+
+    updated_at:
+        label: indikator.marketing::lang.form.updated
+        searchable: true
+        invisible: true
+        type: datetime
+        format: Y-m-d G:i

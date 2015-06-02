@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: indikator.marketing::lang.title.ads
+form: @/plugins/indikator/marketing/models/ads/fields.yaml
+modelClass: Indikator\Marketing\Models\Ads
+defaultRedirect: indikator/marketing/ads
+
+create:
+    redirect: indikator/marketing/ads
+    redirectClose: indikator/marketing/ads
+
+update:
+    redirect: indikator/marketing/ads
+    redirectClose: indikator/marketing/ads

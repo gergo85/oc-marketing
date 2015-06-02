@@ -1,0 +1,54 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: indikator.marketing::lang.form.name
+        required: true
+        span: auto
+
+    project_id:
+        label: indikator.marketing::lang.form.project
+        required: true
+        type: dropdown
+        span: auto
+
+    type:
+        label: indikator.marketing::lang.form.type
+        required: true
+        type: dropdown
+        options:
+            1: indikator.marketing::lang.form.online
+            2: indikator.marketing::lang.form.offline
+        default: 1
+
+    location:
+        label: indikator.marketing::lang.form.location
+        span: auto
+
+    text:
+        label: indikator.marketing::lang.form.text
+        required: true
+        type: textarea
+        size: large
+
+    common:
+        label: indikator.marketing::lang.form.common
+        type: textarea
+        size: small
+
+secondaryTabs:
+    fields:
+
+        start:
+            label: indikator.marketing::lang.form.start
+            type: datepicker
+            mode: date
+            required: true
+
+        end:
+            label: indikator.marketing::lang.form.end
+            type: datepicker
+            mode: date

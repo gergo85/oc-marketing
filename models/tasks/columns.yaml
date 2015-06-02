@@ -1,0 +1,56 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    name:
+        label: indikator.marketing::lang.form.name
+        searchable: true
+
+    project_id:
+        label: indikator.marketing::lang.form.project
+        searchable: true
+        type: partial
+        path: @/plugins/indikator/marketing/models/tasks/_project.htm
+
+    description:
+        label: indikator.marketing::lang.form.description
+        searchable: true
+
+    deadline:
+        label: indikator.marketing::lang.form.deadline
+        searchable: true
+        type: datetime
+        format: Y-m-d
+
+    priority:
+        label: indikator.marketing::lang.form.priority
+        searchable: true
+        type: partial
+        path: @/plugins/indikator/marketing/models/tasks/_priority.htm
+
+    common:
+        label: indikator.marketing::lang.form.common
+        searchable: true
+        invisible: true
+
+    status:
+        label: indikator.marketing::lang.form.status
+        searchable: true
+        type: partial
+        path: @/plugins/indikator/marketing/models/tasks/_status.htm
+
+    created_at:
+        label: indikator.marketing::lang.filters.created
+        searchable: true
+        invisible: true
+        type: datetime
+        format: Y-m-d G:i
+
+    updated_at:
+        label: indikator.marketing::lang.filters.updated
+        searchable: true
+        invisible: true
+        type: datetime
+        format: Y-m-d G:i

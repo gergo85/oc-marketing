@@ -1,0 +1,54 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: indikator.marketing::lang.form.name
+        required: true
+        span: auto
+
+    client_id:
+        label: indikator.marketing::lang.form.client
+        required: true
+        type: dropdown
+        span: auto
+
+    task:
+        label: indikator.marketing::lang.form.task
+        type: textarea
+        size: small
+        required: true
+        span: auto
+
+    goal:
+        label: indikator.marketing::lang.form.goal
+        type: textarea
+        size: small
+        required: true
+        span: auto
+
+    common:
+        label: indikator.marketing::lang.form.common
+        type: textarea
+        size: small
+
+secondaryTabs:
+    fields:
+
+        start:
+            label: indikator.marketing::lang.form.start
+            required: true
+            type: datepicker
+            mode: date
+
+        end:
+            label: indikator.marketing::lang.form.end
+            type: datepicker
+            mode: date
+
+        user_id:
+            label: indikator.marketing::lang.form.user
+            required: true
+            type: dropdown

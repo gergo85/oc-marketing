@@ -1,0 +1,49 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: indikator.marketing::lang.form.title
+        required: true
+        span: auto
+
+    url:
+        label: indikator.marketing::lang.form.url
+        required: true
+        span: auto
+
+    project_id:
+        label: indikator.marketing::lang.form.project
+        required: true
+        type: dropdown
+        span: auto
+
+    comment:
+        label: indikator.marketing::lang.form.comment
+        required: true
+        type: textarea
+        size: large
+
+    common:
+        label: indikator.marketing::lang.form.common
+        type: textarea
+        size: small
+
+secondaryTabs:
+    fields:
+
+        feedback:
+            label: indikator.marketing::lang.form.feedback
+            required: true
+            type: dropdown
+            options:
+                0: indikator.marketing::lang.feedback.none
+                1: indikator.marketing::lang.feedback.neutral
+                2: indikator.marketing::lang.feedback.positive
+                3: indikator.marketing::lang.feedback.negative
+            default: 0
+
+        lang:
+            label: indikator.marketing::lang.form.lang

@@ -1,0 +1,5 @@
+<?php
+
+echo DB::table('marketing_projects')->where('id', $record->project_id)->pluck('name');
+
+?>

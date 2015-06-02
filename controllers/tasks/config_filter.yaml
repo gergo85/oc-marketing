@@ -1,0 +1,42 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    status_completed:
+        label: indikator.marketing::lang.button.completed
+        type: checkbox
+        conditions: status = 1
+
+    status_uncompleted:
+        label: indikator.marketing::lang.button.uncompleted
+        type: checkbox
+        conditions: status = 2 in (:filtered)
+
+    priority1:
+        label: indikator.marketing::lang.priority.higt
+        type: checkbox
+        conditions: priority = 1
+
+    priority2:
+        label: indikator.marketing::lang.priority.normal
+        type: checkbox
+        conditions: priority = 2
+
+    priority3:
+        label: indikator.marketing::lang.priority.low
+        type: checkbox
+        conditions: priority = 3
+
+    client:
+        label: indikator.marketing::lang.form.client
+        modelClass: Indikator\Marketing\Models\Client
+        nameFrom: name
+        conditions: client_id in (:filtered)
+
+    project:
+        label: indikator.marketing::lang.form.project
+        modelClass: Indikator\Marketing\Models\Project
+        nameFrom: name
+        conditions: project_id in (:filtered)

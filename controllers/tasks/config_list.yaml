@@ -1,0 +1,22 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: indikator.marketing::lang.menu.tasks
+list: @/plugins/indikator/marketing/models/tasks/columns.yaml
+modelClass: Indikator\Marketing\Models\Tasks
+recordUrl: indikator/marketing/tasks/update/:id
+noRecordsMessage: backend::lang.list.no_records
+
+recordsPerPage: 15
+showCheckboxes: true
+showSetup: true
+defaultSort:
+    column: priority
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt
+
+filter: config_filter.yaml

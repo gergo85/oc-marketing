@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: indikator.marketing::lang.title.clients
+form: @/plugins/indikator/marketing/models/clients/fields.yaml
+modelClass: Indikator\Marketing\Models\Clients
+defaultRedirect: indikator/marketing/clients
+
+create:
+    redirect: indikator/marketing/clients
+    redirectClose: indikator/marketing/clients
+
+update:
+    redirect: indikator/marketing/clients
+    redirectClose: indikator/marketing/clients

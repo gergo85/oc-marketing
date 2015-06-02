@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: indikator.marketing::lang.title.tasks
+form: @/plugins/indikator/marketing/models/tasks/fields.yaml
+modelClass: Indikator\Marketing\Models\Tasks
+defaultRedirect: indikator/marketing/tasks
+
+create:
+    redirect: indikator/marketing/tasks
+    redirectClose: indikator/marketing/tasks
+
+update:
+    redirect: indikator/marketing/tasks
+    redirectClose: indikator/marketing/tasks

@@ -1,0 +1,54 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: indikator.marketing::lang.form.name
+        required: true
+        span: auto
+
+    address:
+        label: indikator.marketing::lang.form.address
+        span: auto
+
+    common:
+        label: indikator.marketing::lang.form.common
+        type: textarea
+        size: small
+
+tabs:
+    fields:
+
+        contact_name:
+            label: indikator.marketing::lang.form.contact_name
+            tab: indikator.marketing::lang.form.contact
+            required: true
+            span: auto
+
+        contact_assignment:
+            label: indikator.marketing::lang.form.contact_assignment
+            tab: indikator.marketing::lang.form.contact
+            span: auto
+
+        contact_email:
+            label: indikator.marketing::lang.form.contact_email
+            tab: indikator.marketing::lang.form.contact
+            required: true
+            span: auto
+
+        contact_tel:
+            label: indikator.marketing::lang.form.contact_tel
+            tab: indikator.marketing::lang.form.contact
+            span: auto
+
+secondaryTabs:
+    fields:
+
+        logo:
+            label: indikator.marketing::lang.form.logo
+            type: fileupload
+            mode: image
+            imageHeight: 260
+            imageWidth: 260

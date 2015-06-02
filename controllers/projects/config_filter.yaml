@@ -1,0 +1,15 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    status_active:
+        label: indikator.marketing::lang.button.active
+        type: checkbox
+        conditions: status = 1
+
+    status_inactive:
+        label: indikator.marketing::lang.button.inactive
+        type: checkbox
+        conditions: status = 2
