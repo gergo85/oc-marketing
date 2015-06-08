@@ -21,6 +21,13 @@ return [
         'clients' => 'ügyfél',
         'tasks' => 'teendő'
     ],
+    'label' => [
+        'ads' => 'Marketing - Hirdetések',
+        'posts' => 'Marketing - Bejegyzések',
+        'projects' => 'Marketing - Projektek',
+        'clients' => 'Marketing - Ügyfelek',
+        'tasks' => 'Marketing - Teendők'
+    ],
     'new' => [
         'ads' => 'Új hirdetés',
         'posts' => 'Új bejegyzés',
@@ -79,6 +86,13 @@ return [
         'completed' => 'Elvégezve',
         'uncompleted' => 'Befejezettlen',
         'return' => 'Vissza'
+    ],
+    'widget' => [
+        'show_total' => 'Összes mutatása',
+        'show_higt' => 'Sürgősek mutatása',
+        'show_normal' => 'Normálok mutatása',
+        'show_low' => 'Ráérősek mutatása',
+        'total' => 'Összes'
     ],
     'flash' => [
         'activate' => 'A tételek sikeresen aktiválva lettek.',

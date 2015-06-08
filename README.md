@@ -8,6 +8,13 @@ Manage marketing activities of your clients. It is only backend plugin.
 * Managing projects
 * Managing clients
 
+###Available widgets
+* Tasks
+* Advertisements
+* Posts
+* Projects
+* Clients
+
 ###Available languages
 * en - English
 * hu - Magyar
@@ -24,8 +31,6 @@ Manage marketing activities of your clients. It is only backend plugin.
 
 ###Plans
 * Add finance
-* Add widgets
-* Add statistics
 * Add languages
 
 ###Credits

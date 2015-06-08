@@ -21,6 +21,13 @@ return [
         'clients' => 'client',
         'tasks' => 'task'
     ],
+    'label' => [
+        'ads' => 'Marketing - Ads',
+        'posts' => 'Marketing - Posts',
+        'projects' => 'Marketing - Projects',
+        'clients' => 'Marketing - Clients',
+        'tasks' => 'Marketing - Tasks'
+    ],
     'new' => [
         'ads' => 'New ad',
         'posts' => 'New post',
@@ -79,6 +86,13 @@ return [
         'completed' => 'Completed',
         'uncompleted' => 'Uncompleted',
         'return' => 'Return'
+    ],
+    'widget' => [
+        'show_total' => 'Show total',
+        'show_higt' => 'Show higt',
+        'show_normal' => 'Show normal',
+        'show_low' => 'Show low',
+        'total' => 'Total'
     ],
     'flash' => [
         'activate' => 'Successfully activated those items.',

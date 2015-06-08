@@ -10,7 +10,8 @@ class Plugin extends PluginBase
         return [
             'name'        => 'indikator.marketing::lang.plugin.name',
             'description' => 'indikator.marketing::lang.plugin.description',
-            'author'      => 'indikator.marketing::lang.plugin.author'
+            'author'      => 'indikator.marketing::lang.plugin.author',
+            'homepage'    => 'https://github.com/gergo85/oc-marketing'
         ];
     }
 
@@ -26,31 +27,62 @@ class Plugin extends PluginBase
 
                 'sideMenu' => [
                     'tasks' => [
-                        'label' => 'indikator.marketing::lang.menu.tasks',
-                        'url'   => Backend::url('indikator/marketing/tasks'),
-                        'icon'  => 'icon-tags'
+                        'label'       => 'indikator.marketing::lang.menu.tasks',
+                        'url'         => Backend::url('indikator/marketing/tasks'),
+                        'icon'        => 'icon-tags',
+                        'permissions' => ['indikator.marketing.tasks']
                     ],
                     'ads' => [
-                        'label' => 'indikator.marketing::lang.menu.ads',
-                        'url'   => Backend::url('indikator/marketing/ads'),
-                        'icon'  => 'icon-file'
+                        'label'       => 'indikator.marketing::lang.menu.ads',
+                        'url'         => Backend::url('indikator/marketing/ads'),
+                        'icon'        => 'icon-file',
+                        'permissions' => ['indikator.marketing.ads']
                     ],
                     'posts' => [
-                        'label' => 'indikator.marketing::lang.menu.posts',
-                        'url'   => Backend::url('indikator/marketing/posts'),
-                        'icon'  => 'icon-comments'
+                        'label'       => 'indikator.marketing::lang.menu.posts',
+                        'url'         => Backend::url('indikator/marketing/posts'),
+                        'icon'        => 'icon-comments',
+                        'permissions' => ['indikator.marketing.posts']
                     ],
                     'projects' => [
-                        'label' => 'indikator.marketing::lang.menu.projects',
-                        'url'   => Backend::url('indikator/marketing/projects'),
-                        'icon'  => 'icon-tasks'
+                        'label'       => 'indikator.marketing::lang.menu.projects',
+                        'url'         => Backend::url('indikator/marketing/projects'),
+                        'icon'        => 'icon-tasks',
+                        'permissions' => ['indikator.marketing.projects']
                     ],
                     'clients' => [
-                        'label' => 'indikator.marketing::lang.menu.clients',
-                        'url'   => Backend::url('indikator/marketing/clients'),
-                        'icon'  => 'icon-users'
+                        'label'       => 'indikator.marketing::lang.menu.clients',
+                        'url'         => Backend::url('indikator/marketing/clients'),
+                        'icon'        => 'icon-users',
+                        'permissions' => ['indikator.marketing.clients']
                     ]
                 ]
+            ]
+        ];
+    }
+
+    public function registerReportWidgets()
+    {
+        return [
+            'Indikator\Marketing\ReportWidgets\Tasks' => [
+                'label'   => 'indikator.marketing::lang.label.tasks',
+                'context' => 'dashboard'
+            ],
+            'Indikator\Marketing\ReportWidgets\Ads' => [
+                'label'   => 'indikator.marketing::lang.label.ads',
+                'context' => 'dashboard'
+            ],
+            'Indikator\Marketing\ReportWidgets\Posts' => [
+                'label'   => 'indikator.marketing::lang.label.posts',
+                'context' => 'dashboard'
+            ],
+            'Indikator\Marketing\ReportWidgets\Projects' => [
+                'label'   => 'indikator.marketing::lang.label.projects',
+                'context' => 'dashboard'
+            ],
+            'Indikator\Marketing\ReportWidgets\Clients' => [
+                'label'   => 'indikator.marketing::lang.label.clients',
+                'context' => 'dashboard'
             ]
         ];
     }
