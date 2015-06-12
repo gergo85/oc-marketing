@@ -9,10 +9,10 @@ class Posts extends Model
     protected $table = 'marketing_posts';
 
     public $rules = [
-        'title' => 'required|between:1,100',
-        'url' => 'required|between:1,100',
+        'title'      => 'required|between:1,100',
+        'url'        => 'required|between:1,100',
         'project_id' => 'between:1,9999|numeric',
-        'feedback' => 'required|between:0,3'
+        'feedback'   => 'required|between:0,3'
     ];
 
     public $belongsTo = [

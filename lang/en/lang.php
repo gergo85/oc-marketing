@@ -3,7 +3,7 @@
 return [
     'plugin' => [
         'name' => 'Marketing Manager',
-        'description' => '',
+        'description' => 'Manage your ads, posts, projects and clients.',
         'author' => 'Gergő Szabó'
     ],
     'menu' => [

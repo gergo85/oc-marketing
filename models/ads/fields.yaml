@@ -23,6 +23,7 @@ fields:
             1: indikator.marketing::lang.form.online
             2: indikator.marketing::lang.form.offline
         default: 1
+        span: auto
 
     location:
         label: indikator.marketing::lang.form.location

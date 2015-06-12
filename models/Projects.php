@@ -9,10 +9,10 @@ class Projects extends Model
     protected $table = 'marketing_projects';
 
     public $rules = [
-        'name' => 'required|between:1,100',
+        'name'      => 'required|between:1,100',
         'client_id' => 'between:1,9999|numeric',
-        'status' => 'between:1,2|numeric',
-        'user_id' => 'between:1,9999|numeric'
+        'status'    => 'between:1,2|numeric',
+        'user_id'   => 'between:1,9999|numeric'
     ];
 
     public $belongsTo = [

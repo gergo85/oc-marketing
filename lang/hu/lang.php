@@ -3,7 +3,7 @@
 return [
     'plugin' => [
         'name' => 'Marketing menedzser',
-        'description' => '',
+        'description' => 'Hirdetések, posztok, projektek és ügyfelek kezelése.',
         'author' => 'Szabó Gergő'
     ],
     'menu' => [
