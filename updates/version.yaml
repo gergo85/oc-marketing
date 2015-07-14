@@ -8,3 +8,6 @@
 1.1.0: Added back-end widgets.
 1.1.1: Improved the permissions.
 1.1.2: Minor improvements.
+1.1.3:
+    - Select images via Media finder.
+    - add_image_field_to_table.php

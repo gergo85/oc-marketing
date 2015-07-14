@@ -48,7 +48,5 @@ secondaryTabs:
 
         logo:
             label: indikator.marketing::lang.form.logo
-            type: fileupload
+            type: mediafinder
             mode: image
-            imageHeight: 260
-            imageWidth: 260

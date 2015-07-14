@@ -17,7 +17,7 @@ class Projects extends Model
 
     public $belongsTo = [
         'client' => ['Indikator\Marketing\Models\Client'],
-        'user' => ['Indikator\Marketing\Models\User']
+        'user'   => ['Indikator\Marketing\Models\User']
     ];
 
     protected $dates = ['start', 'end'];

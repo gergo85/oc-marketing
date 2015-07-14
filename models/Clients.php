@@ -13,8 +13,4 @@ class Clients extends Model
         'contact_name'  => 'required|between:3,50',
         'contact_email' => 'required|between:8,50'
     ];
-
-    public $attachOne = [
-        'logo' => ['System\Models\File']
-    ];
 }

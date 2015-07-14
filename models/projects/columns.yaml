@@ -12,7 +12,7 @@ columns:
         label: indikator.marketing::lang.form.client
         searchable: true
         type: partial
-        path: @/plugins/indikator/marketing/models/projects/_client.htm
+        path: ~/plugins/indikator/marketing/models/projects/_client.htm
 
     task:
         label: indikator.marketing::lang.form.task
@@ -47,7 +47,7 @@ columns:
         searchable: true
         invisible: true
         type: partial
-        path: @/plugins/indikator/marketing/models/projects/_user.htm
+        path: ~/plugins/indikator/marketing/models/projects/_user.htm
 
     created_at:
         label: indikator.marketing::lang.form.created

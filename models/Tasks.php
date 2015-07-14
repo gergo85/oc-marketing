@@ -18,7 +18,7 @@ class Tasks extends Model
 
     public $belongsTo = [
         'project' => ['Indikator\Marketing\Models\Project'],
-        'user' => ['Indikator\Marketing\Models\User']
+        'user'    => ['Indikator\Marketing\Models\User']
     ];
 
     protected $dates = ['deadline'];

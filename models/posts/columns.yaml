@@ -17,7 +17,7 @@ columns:
         label: indikator.marketing::lang.form.project
         searchable: true
         type: partial
-        path: @/plugins/indikator/marketing/models/posts/_project.htm
+        path: ~/plugins/indikator/marketing/models/posts/_project.htm
 
     lang:
         label: indikator.marketing::lang.form.lang
@@ -28,7 +28,7 @@ columns:
         label: indikator.marketing::lang.form.feedback
         searchable: true
         type: partial
-        path: @/plugins/indikator/marketing/models/posts/_feedback.htm
+        path: ~/plugins/indikator/marketing/models/posts/_feedback.htm
 
     common:
         label: indikator.marketing::lang.form.common
