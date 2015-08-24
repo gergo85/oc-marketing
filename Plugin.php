@@ -11,6 +11,7 @@ class Plugin extends PluginBase
             'name'        => 'indikator.marketing::lang.plugin.name',
             'description' => 'indikator.marketing::lang.plugin.description',
             'author'      => 'indikator.marketing::lang.plugin.author',
+            'icon'        => 'icon-bar-chart',
             'homepage'    => 'https://github.com/gergo85/oc-marketing'
         ];
     }
@@ -98,11 +99,26 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'indikator.marketing.tasks'    => ['tab' => 'indikator.marketing::lang.menu.marketing', 'label' => 'indikator.marketing::lang.permission.tasks'],
-            'indikator.marketing.ads'      => ['tab' => 'indikator.marketing::lang.menu.marketing', 'label' => 'indikator.marketing::lang.permission.ads'],
-            'indikator.marketing.posts'    => ['tab' => 'indikator.marketing::lang.menu.marketing', 'label' => 'indikator.marketing::lang.permission.posts'],
-            'indikator.marketing.projects' => ['tab' => 'indikator.marketing::lang.menu.marketing', 'label' => 'indikator.marketing::lang.permission.projects'],
-            'indikator.marketing.clients'  => ['tab' => 'indikator.marketing::lang.menu.marketing', 'label' => 'indikator.marketing::lang.permission.clients']
+            'indikator.marketing.tasks' => [
+                'tab'   => 'indikator.marketing::lang.menu.marketing',
+                'label' => 'indikator.marketing::lang.permission.tasks'
+            ],
+            'indikator.marketing.ads' => [
+                'tab'   => 'indikator.marketing::lang.menu.marketing',
+                'label' => 'indikator.marketing::lang.permission.ads'
+            ],
+            'indikator.marketing.posts' => [
+                'tab'   => 'indikator.marketing::lang.menu.marketing',
+                'label' => 'indikator.marketing::lang.permission.posts'
+            ],
+            'indikator.marketing.projects' => [
+                'tab'   => 'indikator.marketing::lang.menu.marketing',
+                'label' => 'indikator.marketing::lang.permission.projects'
+            ],
+            'indikator.marketing.clients' => [
+                'tab'   => 'indikator.marketing::lang.menu.marketing',
+                'label' => 'indikator.marketing::lang.permission.clients'
+            ]
         ];
     }
 }

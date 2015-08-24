@@ -35,12 +35,9 @@ class Tasks extends Controller
 
     public function onCompleted()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_tasks')->where('id', $objectId)->where('status', 1)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_tasks')->where('id', $objectId)->where('status', 1)->count() == 1) {
                     DB::table('marketing_tasks')->where('id', $objectId)->update(array('status' => 2));
                 }
             }
@@ -53,12 +50,9 @@ class Tasks extends Controller
 
     public function onUncompleted()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_tasks')->where('id', $objectId)->where('status', 2)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_tasks')->where('id', $objectId)->where('status', 2)->count() == 1) {
                     DB::table('marketing_tasks')->where('id', $objectId)->update(array('status' => 1));
                 }
             }
@@ -71,12 +65,9 @@ class Tasks extends Controller
 
     public function onPriority1()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_tasks')->where('id', $objectId)->where('priority', '!=', 1)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_tasks')->where('id', $objectId)->where('priority', '!=', 1)->count() == 1) {
                     DB::table('marketing_tasks')->where('id', $objectId)->update(array('priority' => 1));
                 }
             }
@@ -89,12 +80,9 @@ class Tasks extends Controller
 
     public function onPriority2()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_tasks')->where('id', $objectId)->where('priority', '!=', 2)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_tasks')->where('id', $objectId)->where('priority', '!=', 2)->count() == 1) {
                     DB::table('marketing_tasks')->where('id', $objectId)->update(array('priority' => 2));
                 }
             }
@@ -107,12 +95,9 @@ class Tasks extends Controller
 
     public function onPriority3()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_tasks')->where('id', $objectId)->where('priority', '!=', 3)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_tasks')->where('id', $objectId)->where('priority', '!=', 3)->count() == 1) {
                     DB::table('marketing_tasks')->where('id', $objectId)->update(array('priority' => 3));
                 }
             }
@@ -125,12 +110,9 @@ class Tasks extends Controller
 
     public function onRemovetasks()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_tasks')->where('id', $objectId)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_tasks')->where('id', $objectId)->count() == 1) {
                     DB::table('marketing_tasks')->where('id', $objectId)->delete();
                 }
             }

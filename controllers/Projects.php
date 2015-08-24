@@ -34,12 +34,9 @@ class Projects extends Controller
 
     public function onSendReport()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_projects')->where('id', $objectId)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_projects')->where('id', $objectId)->count() == 1) {
                     global $client;
                     $ads = $posts = '';
 
@@ -51,15 +48,13 @@ class Projects extends Controller
 
                     $items = DB::table('marketing_ads')->where('project_id', $objectId)->get();
 
-                    foreach ($items as $item)
-                    {
+                    foreach ($items as $item) {
                         $ads .= '<strong>'.$item->name.'</strong> ('.date('Y-m-d', $item->start).' - '.date('Y-m-d', $item->end).')<br>'.$item->text.'<br><br>';
                     }
 
                     $items = DB::table('marketing_posts')->where('project_id', $objectId)->get();
 
-                    foreach ($items as $item)
-                    {
+                    foreach ($items as $item) {
                         $posts .= '<strong>'.$item->title.'</strong> ('.date('Y-m-d', $item->start).' - '.date('Y-m-d', $item->end).')<br><a href="'.$item->url.'" target="_blank">'.$item->url.'</a><br>'.$item->post.'<br><br>';
                     }
 
@@ -81,12 +76,9 @@ class Projects extends Controller
 
     public function onActivateProjects()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_projects')->where('id', $objectId)->where('status', 2)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_projects')->where('id', $objectId)->where('status', 2)->count() == 1) {
                     DB::table('marketing_projects')->where('id', $objectId)->update(array('status' => 1));
                 }
             }
@@ -99,12 +91,9 @@ class Projects extends Controller
 
     public function onDeactivateProjects()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_projects')->where('id', $objectId)->where('status', 1)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_projects')->where('id', $objectId)->where('status', 1)->count() == 1) {
                     DB::table('marketing_projects')->where('id', $objectId)->update(array('status' => 2));
                 }
             }
@@ -117,12 +106,9 @@ class Projects extends Controller
 
     public function onRemoveProjects()
     {
-        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds))
-        {
-            foreach ($checkedIds as $objectId)
-            {
-                if (DB::table('marketing_projects')->where('id', $objectId)->count() == 1)
-                {
+        if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
+            foreach ($checkedIds as $objectId) {
+                if (DB::table('marketing_projects')->where('id', $objectId)->count() == 1) {
                     DB::table('marketing_projects')->where('id', $objectId)->delete();
                 }
             }
