@@ -3,7 +3,7 @@
 # ===================================
 
 title: indikator.marketing::lang.menu.projects
-list: @/plugins/indikator/marketing/models/projects/columns.yaml
+list: ~/plugins/indikator/marketing/models/projects/columns.yaml
 modelClass: Indikator\Marketing\Models\Projects
 recordUrl: indikator/marketing/projects/update/:id
 noRecordsMessage: backend::lang.list.no_records

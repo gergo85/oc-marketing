@@ -3,7 +3,7 @@
 # ===================================
 
 name: indikator.marketing::lang.title.projects
-form: @/plugins/indikator/marketing/models/projects/fields.yaml
+form: ~/plugins/indikator/marketing/models/projects/fields.yaml
 modelClass: Indikator\Marketing\Models\Projects
 defaultRedirect: indikator/marketing/projects
 

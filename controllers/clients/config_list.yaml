@@ -3,7 +3,7 @@
 # ===================================
 
 title: indikator.marketing::lang.menu.clients
-list: @/plugins/indikator/marketing/models/clients/columns.yaml
+list: ~/plugins/indikator/marketing/models/clients/columns.yaml
 modelClass: Indikator\Marketing\Models\Clients
 recordUrl: indikator/marketing/clients/update/:id
 noRecordsMessage: backend::lang.list.no_records

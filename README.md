@@ -27,11 +27,8 @@ Manage marketing activities of your clients. It is only backend plugin.
 ###Add widget
 1. Go to the __Dashboard__ page in Backend.
 1. Click on the __Add widget__ button.
-1. Select the current widget from the list.
+1. __Select__ the current widget from the list.
 
 ###Plans
 * Add finance
 * Add languages
-
-###Credits
-* Plugin icon: [Web App icons](http://icons8.com/web-app/new-icons/all)

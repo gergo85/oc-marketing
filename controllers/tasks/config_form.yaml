@@ -3,7 +3,7 @@
 # ===================================
 
 name: indikator.marketing::lang.title.tasks
-form: @/plugins/indikator/marketing/models/tasks/fields.yaml
+form: ~/plugins/indikator/marketing/models/tasks/fields.yaml
 modelClass: Indikator\Marketing\Models\Tasks
 defaultRedirect: indikator/marketing/tasks
 
