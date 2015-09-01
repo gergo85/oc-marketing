@@ -32,12 +32,24 @@ class Projects extends ReportWidgetBase
                 'title'             => 'indikator.marketing::lang.widget.show_total',
                 'default'           => true,
                 'type'              => 'checkbox'
+            ],
+            'active' => [
+                'title'             => 'indikator.marketing::lang.widget.show_active',
+                'default'           => true,
+                'type'              => 'checkbox'
+            ],
+            'inactive' => [
+                'title'             => 'indikator.marketing::lang.widget.show_inactive',
+                'default'           => true,
+                'type'              => 'checkbox'
             ]
         ];
     }
 
     protected function loadData()
     {
-        $this->vars['total'] = DB::table('marketing_projects')->count();
+        $this->vars['active'] = DB::table('marketing_projects')->where('status', 1)->count();
+        $this->vars['inactive'] = DB::table('marketing_projects')->where('status', 2)->count();
+        $this->vars['total'] = $this->vars['active'] + $this->vars['inactive'];
     }
 }

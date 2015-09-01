@@ -3,9 +3,23 @@
 
 <?php if (!isset($error)): ?>
     <?php if ($this->property('total')): ?>
-    <div class="scoreboard-item title-value pull-left" style="margin:20px 0 0 0;">
+    <div class="scoreboard-item title-value pull-left" style="margin:20px 20px 0 0;">
         <h4><?= e(trans('indikator.marketing::lang.widget.total')) ?></h4>
         <p class="text-center"><?= $total ?></p>
+    </div>
+    <?php endif ?>
+
+    <?php if ($this->property('active')): ?>
+    <div class="scoreboard-item title-value pull-left" style="margin:20px 20px 0 0;">
+        <h4><?= e(trans('indikator.marketing::lang.button.active')) ?></h4>
+        <p class="text-center"><?= $active ?></p>
+    </div>
+    <?php endif ?>
+
+    <?php if ($this->property('inactive')): ?>
+    <div class="scoreboard-item title-value pull-left" style="margin:20px 0 0 0;">
+        <h4><?= e(trans('indikator.marketing::lang.button.inactive')) ?></h4>
+        <p class="text-center"><?= $inactive ?></p>
     </div>
     <?php endif ?>
 
