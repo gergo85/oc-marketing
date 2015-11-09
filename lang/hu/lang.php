@@ -101,8 +101,8 @@ return [
         'uncompleted' => 'A tételek nem lettek befejezve.',
         'report' => 'A jelentés sikeresen el lett küldve az ügyfélnek.',
         'priority' => 'A fontosság sikeresen módosítva lett.',
-        'delete' => 'Valóban törölni akarja a tételeket?',
-        'remove' => 'A tételek sikeresen eltávolításra kerültek.'
+        'delete' => 'Valóban törölni akarja?',
+        'remove' => 'Az eltávolítás sikeres volt.'
     ],
     'feedback' => [
         'none' => 'Nincs',
