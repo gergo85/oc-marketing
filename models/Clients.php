@@ -9,8 +9,8 @@ class Clients extends Model
     protected $table = 'marketing_clients';
 
     public $rules = [
-        'name'          => 'required|between:3,100',
-        'contact_name'  => 'required|between:3,50',
-        'contact_email' => 'required|between:8,50'
+        'name'          => 'required|between:2,100',
+        'contact_name'  => 'required|between:2,50',
+        'contact_email' => 'required|between:6,50'
     ];
 }

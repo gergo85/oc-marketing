@@ -4,6 +4,7 @@
 
 name: indikator.marketing::lang.title.posts
 form: ~/plugins/indikator/marketing/models/posts/fields.yaml
+
 modelClass: Indikator\Marketing\Models\Posts
 defaultRedirect: indikator/marketing/posts
 

@@ -4,6 +4,7 @@
 
 name: indikator.marketing::lang.title.ads
 form: ~/plugins/indikator/marketing/models/ads/fields.yaml
+
 modelClass: Indikator\Marketing\Models\Ads
 defaultRedirect: indikator/marketing/ads
 

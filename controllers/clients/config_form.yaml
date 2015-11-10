@@ -4,6 +4,7 @@
 
 name: indikator.marketing::lang.title.clients
 form: ~/plugins/indikator/marketing/models/clients/fields.yaml
+
 modelClass: Indikator\Marketing\Models\Clients
 defaultRedirect: indikator/marketing/clients
 

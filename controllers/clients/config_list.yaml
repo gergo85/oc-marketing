@@ -4,6 +4,7 @@
 
 title: indikator.marketing::lang.menu.clients
 list: ~/plugins/indikator/marketing/models/clients/columns.yaml
+
 modelClass: Indikator\Marketing\Models\Clients
 recordUrl: indikator/marketing/clients/update/:id
 noRecordsMessage: backend::lang.list.no_records
@@ -11,6 +12,7 @@ noRecordsMessage: backend::lang.list.no_records
 recordsPerPage: 15
 showCheckboxes: true
 showSetup: true
+
 defaultSort:
     column: name
 
