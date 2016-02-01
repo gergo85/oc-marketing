@@ -48,8 +48,8 @@ return [
         'updated' => 'Módosítva',
         // Hirdetés
         'type' => 'Típus',
-        'online' => 'online',
-        'offline' => 'offline',
+        'online' => 'Online',
+        'offline' => 'Offline',
         'location' => 'Helye',
         'text' => 'Szöveg',
         // Ügyfél
