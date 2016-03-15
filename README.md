@@ -20,7 +20,7 @@ Manage marketing activities of your clients. It is only backend plugin.
 * hu - Magyar
 
 ###Installation
-1. Go to the __Settings -> Updates__ page in Backend.
+1. Go to the __Settings > Updates__ page in Backend.
 1. Click on the __Install Plugins__ button.
 1. Type the __Marketing Manager__ in search field.
 
