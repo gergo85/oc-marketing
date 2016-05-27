@@ -1,4 +1,4 @@
-##Marketing Manager plugin for OctoberCMS
+##Marketing Manager plugin
 Manage marketing activities of your clients. It is only backend plugin.
 
 ###Main features
@@ -30,5 +30,5 @@ Manage marketing activities of your clients. It is only backend plugin.
 1. __Select__ the current widget from the list.
 
 ###Plans
-* Add finance
-* Add languages
+* Add finance feature
+* Add more languages
