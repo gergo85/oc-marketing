@@ -37,7 +37,7 @@ secondaryTabs:
         feedback:
             label: indikator.marketing::lang.form.feedback
             required: true
-            type: dropdown
+            type: radio
             options:
                 0: indikator.marketing::lang.feedback.none
                 1: indikator.marketing::lang.feedback.neutral
