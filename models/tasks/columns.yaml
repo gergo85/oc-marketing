@@ -42,14 +42,14 @@ columns:
         path: ~/plugins/indikator/marketing/models/tasks/_status.htm
 
     created_at:
-        label: indikator.marketing::lang.filters.created
+        label: indikator.marketing::lang.form.created
         searchable: true
         invisible: true
         type: datetime
         format: Y-m-d G:i
 
     updated_at:
-        label: indikator.marketing::lang.filters.updated
+        label: indikator.marketing::lang.form.updated
         searchable: true
         invisible: true
         type: datetime
