@@ -13,3 +13,13 @@ scopes:
         label: indikator.marketing::lang.button.inactive
         type: checkbox
         conditions: status = 2
+
+    created_date:
+        label: indikator.marketing::lang.form.created
+        type: daterange
+        conditions: created_at >= ':after' AND created_at <= ':before'
+
+    updated_date:
+        label: indikator.marketing::lang.form.updated
+        type: daterange
+        conditions: updated_at >= ':after' AND updated_at <= ':before'

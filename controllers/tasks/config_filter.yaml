@@ -40,3 +40,13 @@ scopes:
         modelClass: Indikator\Marketing\Models\Project
         nameFrom: name
         conditions: project_id in (:filtered)
+
+    created_date:
+        label: indikator.marketing::lang.form.created
+        type: daterange
+        conditions: created_at >= ':after' AND created_at <= ':before'
+
+    updated_date:
+        label: indikator.marketing::lang.form.updated
+        type: daterange
+        conditions: updated_at >= ':after' AND updated_at <= ':before'
