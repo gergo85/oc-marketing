@@ -23,16 +23,14 @@ fields:
     comment:
         label: indikator.marketing::lang.form.comment
         required: true
-        type: textarea
+        type: richeditor
         size: large
-
-    common:
-        label: indikator.marketing::lang.form.common
-        type: textarea
-        size: small
 
 secondaryTabs:
     fields:
+
+        lang:
+            label: indikator.marketing::lang.form.lang
 
         feedback:
             label: indikator.marketing::lang.form.feedback
@@ -45,5 +43,7 @@ secondaryTabs:
                 3: indikator.marketing::lang.feedback.negative
             default: 0
 
-        lang:
-            label: indikator.marketing::lang.form.lang
+        common:
+            label: indikator.marketing::lang.form.common
+            type: textarea
+            size: small

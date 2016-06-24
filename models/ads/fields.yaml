@@ -15,16 +15,6 @@ fields:
         type: dropdown
         span: auto
 
-    type:
-        label: indikator.marketing::lang.form.type
-        required: true
-        type: dropdown
-        options:
-            1: indikator.marketing::lang.form.online
-            2: indikator.marketing::lang.form.offline
-        default: 1
-        span: auto
-
     location:
         label: indikator.marketing::lang.form.location
         span: auto
@@ -32,13 +22,8 @@ fields:
     text:
         label: indikator.marketing::lang.form.text
         required: true
-        type: textarea
+        type: richeditor
         size: large
-
-    common:
-        label: indikator.marketing::lang.form.common
-        type: textarea
-        size: small
 
 secondaryTabs:
     fields:
@@ -53,3 +38,17 @@ secondaryTabs:
             label: indikator.marketing::lang.form.end
             type: datepicker
             mode: date
+
+        type:
+            label: indikator.marketing::lang.form.type
+            required: true
+            type: radio
+            options:
+                1: indikator.marketing::lang.form.online
+                2: indikator.marketing::lang.form.offline
+            default: 1
+
+        common:
+            label: indikator.marketing::lang.form.common
+            type: textarea
+            size: small
