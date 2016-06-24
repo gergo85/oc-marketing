@@ -20,14 +20,14 @@ Manage marketing activities of your clients. It is only backend plugin.
 * hu - Magyar
 
 ###Installation
-1. Go to the __Settings > Updates__ page in Backend.
-1. Click on the __Install Plugins__ button.
-1. Type the __Marketing Manager__ in search field.
+1. Go to the __Settings > Updates & Plugins__ page in the Backend.
+1. Click on the __Install plugins__ button.
+1. Type the __Marketing Manager__ text in the search field.
 
 ###Add widget
-1. Go to the __Dashboard__ page in Backend.
-1. Click on the __Add widget__ button.
-1. __Select__ the current widget from the list.
+1. Go to the __Dashboard__ page in the Backend.
+1. Click on the __Manage widgets > Add widget__ button.
+1. Select the any __Marketing widgets__ from the list.
 
 ###Plans
 * Add finance feature

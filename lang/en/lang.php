@@ -62,7 +62,7 @@ return [
         'logo' => 'Logo',
         // Post
         'title' => 'Title',
-        'url' => 'URL',
+        'url' => 'Slug',
         'lang' => 'Language',
         'feedback' => 'Feedback',
         'comment' => 'Comment',
