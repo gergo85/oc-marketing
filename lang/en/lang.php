@@ -60,6 +60,7 @@ return [
         'contact_tel' => 'Telephone',
         'contact_email' => 'E-mail',
         'logo' => 'Logo',
+        'pieces' => 'pieces',
         // Post
         'title' => 'Title',
         'url' => 'Slug',

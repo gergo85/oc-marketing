@@ -9,10 +9,10 @@ class Posts extends Model
     protected $table = 'marketing_posts';
 
     public $rules = [
-        'title'      => 'required|between:1,100',
-        'url'        => ['required|between:1,100', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:marketing_posts'],
-        'project_id' => 'between:1,9999|numeric',
-        'feedback'   => 'required|between:0,3'
+        'title'      => 'required',
+        'url'        => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:marketing_posts'],
+        'project_id' => 'between:0,9999|numeric',
+        'feedback'   => 'required|between:0,3|numeric'
     ];
 
     public $belongsTo = [

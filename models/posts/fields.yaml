@@ -16,7 +16,6 @@ fields:
 
     project_id:
         label: indikator.marketing::lang.form.project
-        required: true
         type: dropdown
         span: auto
 

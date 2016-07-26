@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
         <li><a href="<?= Backend::url('indikator/marketing/ads') ?>"><?= e(trans('indikator.marketing::lang.menu.ads')) ?></a></li>
-        <li><?= e(trans($this->pageTitle)) ?></li>
+        <li><?= ucfirst(e(trans($this->pageTitle))) ?></li>
     </ul>
 <?php Block::endPut() ?>
 

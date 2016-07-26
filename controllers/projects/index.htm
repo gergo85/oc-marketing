@@ -1,6 +1,11 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
         <li><?= e(trans('indikator.marketing::lang.menu.projects')) ?></li>
+        <li>
+            <span class="text-info"><strong><?= DB::table('marketing_projects')->where('status', 1)->count() ?></strong> <?= e(trans('indikator.marketing::lang.button.active')) ?></span>
+            &nbsp; | &nbsp;
+            <span class="text-danger"><strong><?= DB::table('marketing_projects')->where('status', 2)->count() ?></strong> <?= e(trans('indikator.marketing::lang.button.inactive')) ?></span>
+        </li>
     </ul>
 <?php Block::endPut() ?>
 

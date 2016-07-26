@@ -12,7 +12,7 @@ scopes:
     status_uncompleted:
         label: indikator.marketing::lang.button.uncompleted
         type: checkbox
-        conditions: status = 2 in (:filtered)
+        conditions: status = 2
 
     priority1:
         label: indikator.marketing::lang.priority.higt

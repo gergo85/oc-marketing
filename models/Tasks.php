@@ -9,8 +9,8 @@ class Tasks extends Model
     protected $table = 'marketing_tasks';
 
     public $rules = [
-        'name'       => 'required|between:1,100',
-        'project_id' => 'between:1,9999|numeric',
+        'name'       => 'required',
+        'project_id' => 'between:0,9999|numeric',
         'priority'   => 'between:1,3|numeric',
         'status'     => 'between:1,2|numeric',
         'user_id'    => 'between:1,9999|numeric'

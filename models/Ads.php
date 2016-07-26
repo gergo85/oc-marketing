@@ -9,8 +9,8 @@ class Ads extends Model
     protected $table = 'marketing_ads';
 
     public $rules = [
-        'name'       => 'required|between:1,100',
-        'project_id' => 'between:1,9999|numeric',
+        'name'       => 'required',
+        'project_id' => 'between:0,9999|numeric',
         'type'       => 'between:1,2|numeric'
     ];
 

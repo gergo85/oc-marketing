@@ -18,3 +18,6 @@
 1.1.8: Minor improvements.
 1.1.9: UI improvements and bug fixes.
 1.2.0: Added the daterange filters for lists.
+1.2.1:
+    - Minor improvements and bugfix.
+    - update_timestamp_nullable.php

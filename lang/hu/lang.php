@@ -60,6 +60,7 @@ return [
         'contact_tel' => 'Telefon',
         'contact_email' => 'E-mail',
         'logo' => 'Logó',
+        'pieces' => 'darab',
         // Bejegyzés
         'title' => 'Cím',
         'url' => 'Webcím',

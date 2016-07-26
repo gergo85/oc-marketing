@@ -1,6 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
         <li><?= e(trans('indikator.marketing::lang.menu.clients')) ?></li>
+        <li><span class="text-info"><strong><?= DB::table('marketing_clients')->count() ?></strong> <?= e(trans('indikator.marketing::lang.form.pieces')) ?></span></li>
     </ul>
 <?php Block::endPut() ?>
 
