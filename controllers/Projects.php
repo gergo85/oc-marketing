@@ -5,7 +5,6 @@ use BackendMenu;
 use Backend\Models\UserPreferences;
 use File;
 use Mail;
-use DB;
 use Flash;
 use Lang;
 
@@ -36,29 +35,35 @@ class Projects extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $objectId) {
-                if (DB::table('marketing_projects')->where('id', $objectId)->count() == 1) {
+                if (Projects::where('id', $objectId)->count() == 1) {
                     global $client;
                     $ads = $posts = '';
 
-                    $project = DB::table('marketing_projects')->where('id', $objectId)->first();
-                    $client = DB::table('marketing_clients')->where('id', $project->client_id)->first();
+                    $project = Projects::where('id', $objectId)->first();
+                    $client = Clients::where('id', $project->client_id)->first();
 
                     $preferences = UserPreferences::forUser()->get('backend::backend.preferences');
-                    if (!File::exists('plugins/indikator/marketing/views/mail/report_'.$preferences['locale'].'.htm')) $preferences['locale'] = 'en';
+                    if (!File::exists('plugins/indikator/marketing/views/mail/report_'.$preferences['locale'].'.htm')) {
+                        $preferences['locale'] = 'en';
+                    }
 
-                    $items = DB::table('marketing_ads')->where('project_id', $objectId)->get();
+                    $items = Ads::where('project_id', $objectId)->get();
 
                     foreach ($items as $item) {
                         $ads .= '<strong>'.$item->name.'</strong> ('.date('Y-m-d', $item->start).' - '.date('Y-m-d', $item->end).')<br>'.$item->text.'<br><br>';
                     }
 
-                    $items = DB::table('marketing_posts')->where('project_id', $objectId)->get();
+                    $items = Posts::where('project_id', $objectId)->get();
 
                     foreach ($items as $item) {
                         $posts .= '<strong>'.$item->title.'</strong> ('.date('Y-m-d', $item->start).' - '.date('Y-m-d', $item->end).')<br><a href="'.$item->url.'" target="_blank">'.$item->url.'</a><br>'.$item->post.'<br><br>';
                     }
 
-                    $params = ['client' => $client->name, 'ads' => $ads, 'posts' => $posts];
+                    $params = [
+                        'client' => $client->name,
+                        'ads'    => $ads,
+                        'posts'  => $posts
+                    ];
 
                     Mail::send('indikator.marketing::mail.report', $params, function($message)
                     {
@@ -78,8 +83,8 @@ class Projects extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $objectId) {
-                if (DB::table('marketing_projects')->where('id', $objectId)->where('status', 2)->count() == 1) {
-                    DB::table('marketing_projects')->where('id', $objectId)->update(['status' => 1]);
+                if (Projects::where('id', $objectId)->where('status', 2)->count() == 1) {
+                    Projects::where('id', $objectId)->update(['status' => 1]);
                 }
             }
 
@@ -93,8 +98,8 @@ class Projects extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $objectId) {
-                if (DB::table('marketing_projects')->where('id', $objectId)->where('status', 1)->count() == 1) {
-                    DB::table('marketing_projects')->where('id', $objectId)->update(['status' => 2]);
+                if (Projects::where('id', $objectId)->where('status', 1)->count() == 1) {
+                    Projects::where('id', $objectId)->update(['status' => 2]);
                 }
             }
 
@@ -108,8 +113,8 @@ class Projects extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $objectId) {
-                if (DB::table('marketing_projects')->where('id', $objectId)->count() == 1) {
-                    DB::table('marketing_projects')->where('id', $objectId)->delete();
+                if (Projects::where('id', $objectId)->count() == 1) {
+                    Projects::where('id', $objectId)->delete();
                 }
             }
 

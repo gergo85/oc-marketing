@@ -2,7 +2,6 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
-use DB;
 use Flash;
 use Lang;
 
@@ -31,8 +30,8 @@ class Clients extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $objectId) {
-                if (DB::table('marketing_clients')->where('id', $objectId)->where('status', 2)->count() == 1) {
-                    DB::table('marketing_clients')->where('id', $objectId)->update(['status' => 1]);
+                if (Clients::where('id', $objectId)->where('status', 2)->count() == 1) {
+                    Clients::where('id', $objectId)->update(['status' => 1]);
                 }
             }
 
@@ -46,8 +45,8 @@ class Clients extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $objectId) {
-                if (DB::table('marketing_clients')->where('id', $objectId)->where('status', 1)->count() == 1) {
-                    DB::table('marketing_clients')->where('id', $objectId)->update(['status' => 2]);
+                if (Clients::where('id', $objectId)->where('status', 1)->count() == 1) {
+                    Clients::where('id', $objectId)->update(['status' => 2]);
                 }
             }
 
@@ -61,8 +60,8 @@ class Clients extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $objectId) {
-                if (DB::table('marketing_clients')->where('id', $objectId)->count() == 1) {
-                    DB::table('marketing_clients')->where('id', $objectId)->delete();
+                if (Clients::where('id', $objectId)->count() == 1) {
+                    Clients::where('id', $objectId)->delete();
                 }
             }
 
