@@ -9,9 +9,9 @@ modelClass: Indikator\Marketing\Models\Projects
 defaultRedirect: indikator/marketing/projects
 
 create:
-    redirect: indikator/marketing/projects
+    redirect: indikator/marketing/projects/update/:id
     redirectClose: indikator/marketing/projects
 
 update:
-    redirect: indikator/marketing/projects
+    redirect: indikator/marketing/projects/update/:id
     redirectClose: indikator/marketing/projects

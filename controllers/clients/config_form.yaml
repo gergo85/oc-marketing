@@ -9,9 +9,9 @@ modelClass: Indikator\Marketing\Models\Clients
 defaultRedirect: indikator/marketing/clients
 
 create:
-    redirect: indikator/marketing/clients
+    redirect: indikator/marketing/clients/update/:id
     redirectClose: indikator/marketing/clients
 
 update:
-    redirect: indikator/marketing/clients
+    redirect: indikator/marketing/clients/update/:id
     redirectClose: indikator/marketing/clients

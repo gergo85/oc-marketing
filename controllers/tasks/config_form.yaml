@@ -9,9 +9,9 @@ modelClass: Indikator\Marketing\Models\Tasks
 defaultRedirect: indikator/marketing/tasks
 
 create:
-    redirect: indikator/marketing/tasks
+    redirect: indikator/marketing/tasks/update/:id
     redirectClose: indikator/marketing/tasks
 
 update:
-    redirect: indikator/marketing/tasks
+    redirect: indikator/marketing/tasks/update/:id
     redirectClose: indikator/marketing/tasks

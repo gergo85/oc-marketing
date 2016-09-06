@@ -9,9 +9,9 @@ modelClass: Indikator\Marketing\Models\Posts
 defaultRedirect: indikator/marketing/posts
 
 create:
-    redirect: indikator/marketing/posts
+    redirect: indikator/marketing/posts/update/:id
     redirectClose: indikator/marketing/posts
 
 update:
-    redirect: indikator/marketing/posts
+    redirect: indikator/marketing/posts/update/:id
     redirectClose: indikator/marketing/posts
