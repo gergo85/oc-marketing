@@ -2,6 +2,7 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
+use Indikator\Marketing\Models\Clients as Item;
 use Flash;
 use Lang;
 
@@ -30,7 +31,7 @@ class Clients extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Clients::where('status', 2)->find($itemId)) {
+                if (!$item = Item::where('status', 2)->find($itemId)) {
                     continue;
                 }
 
@@ -47,7 +48,7 @@ class Clients extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Clients::where('status', 1)->find($itemId)) {
+                if (!$item = Item::where('status', 1)->find($itemId)) {
                     continue;
                 }
 
@@ -64,7 +65,7 @@ class Clients extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Clients::find($itemId)) {
+                if (!$item = Item::find($itemId)) {
                     continue;
                 }
 

@@ -5,6 +5,7 @@ use BackendMenu;
 use Backend\Models\UserPreferences;
 use File;
 use Mail;
+use Indikator\Marketing\Models\Projects as Item;
 use Flash;
 use Lang;
 
@@ -83,7 +84,7 @@ class Projects extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Projects::where('status', 2)->find($itemId)) {
+                if (!$item = Item::where('status', 2)->find($itemId)) {
                     continue;
                 }
 
@@ -100,7 +101,7 @@ class Projects extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Projects::where('status', 1)->find($itemId)) {
+                if (!$item = Item::where('status', 1)->find($itemId)) {
                     continue;
                 }
 
@@ -117,7 +118,7 @@ class Projects extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Projects::find($itemId)) {
+                if (!$item = Item::find($itemId)) {
                     continue;
                 }
 

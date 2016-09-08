@@ -3,6 +3,7 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 use BackendAuth;
+use Indikator\Marketing\Models\Tasks as Item;
 use Flash;
 use Lang;
 
@@ -36,7 +37,7 @@ class Tasks extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Tasks::where('status', 1)->find($itemId)) {
+                if (!$item = Item::where('status', 1)->find($itemId)) {
                     continue;
                 }
 
@@ -53,7 +54,7 @@ class Tasks extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Tasks::where('status', 2)->find($itemId)) {
+                if (!$item = Item::where('status', 2)->find($itemId)) {
                     continue;
                 }
 
@@ -70,7 +71,7 @@ class Tasks extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Tasks::where('priority', '!=', 1)->find($itemId)) {
+                if (!$item = Item::where('priority', '!=', 1)->find($itemId)) {
                     continue;
                 }
 
@@ -87,7 +88,7 @@ class Tasks extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Tasks::where('priority', '!=', 2)->find($itemId)) {
+                if (!$item = Item::where('priority', '!=', 2)->find($itemId)) {
                     continue;
                 }
 
@@ -104,7 +105,7 @@ class Tasks extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Tasks::where('priority', '!=', 3)->find($itemId)) {
+                if (!$item = Item::where('priority', '!=', 3)->find($itemId)) {
                     continue;
                 }
 
@@ -121,7 +122,7 @@ class Tasks extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {
-                if (!$item = Tasks::find($itemId)) {
+                if (!$item = Item::find($itemId)) {
                     continue;
                 }
 
