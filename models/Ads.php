@@ -18,7 +18,10 @@ class Ads extends Model
         'project' => ['Indikator\Marketing\Models\Project']
     ];
 
-    protected $dates = ['start', 'end'];
+    protected $dates = [
+        'start',
+        'end'
+    ];
 
     public function getProjectIdOptions()
     {

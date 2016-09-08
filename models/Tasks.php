@@ -21,7 +21,9 @@ class Tasks extends Model
         'user'    => ['Indikator\Marketing\Models\User']
     ];
 
-    protected $dates = ['deadline'];
+    protected $dates = [
+        'deadline'
+    ];
 
     public function getProjectIdOptions()
     {

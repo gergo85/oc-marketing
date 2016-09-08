@@ -20,7 +20,10 @@ class Projects extends Model
         'user'   => ['Indikator\Marketing\Models\User']
     ];
 
-    protected $dates = ['start', 'end'];
+    protected $dates = [
+        'start',
+        'end'
+    ];
 
     public function getClientIdOptions()
     {
