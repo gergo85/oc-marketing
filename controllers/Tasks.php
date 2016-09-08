@@ -35,90 +35,102 @@ class Tasks extends Controller
     public function onCompleted()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Tasks::where('id', $objectId)->where('status', 1)->count() == 1) {
-                    Tasks::where('id', $objectId)->update(['status' => 2]);
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Tasks::where('status', 1)->find($itemId)) {
+                    continue;
                 }
+
+                $item->update(['status' => 2]);
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.completed'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 
     public function onUncompleted()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Tasks::where('id', $objectId)->where('status', 2)->count() == 1) {
-                    Tasks::where('id', $objectId)->update(['status' => 1]);
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Tasks::where('status', 2)->find($itemId)) {
+                    continue;
                 }
+
+                $item->update(['status' => 1]);
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.uncompleted'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 
     public function onPriority1()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Tasks::where('id', $objectId)->where('priority', '!=', 1)->count() == 1) {
-                    Tasks::where('id', $objectId)->update(['priority' => 1]);
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Tasks::where('priority', '!=', 1)->find($itemId)) {
+                    continue;
                 }
+
+                $item->update(['priority' => 1]);
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.priority'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 
     public function onPriority2()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Tasks::where('id', $objectId)->where('priority', '!=', 2)->count() == 1) {
-                    Tasks::where('id', $objectId)->update(['priority' => 2]);
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Tasks::where('priority', '!=', 2)->find($itemId)) {
+                    continue;
                 }
+
+                $item->update(['priority' => 2]);
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.priority'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 
     public function onPriority3()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Tasks::where('id', $objectId)->where('priority', '!=', 3)->count() == 1) {
-                    Tasks::where('id', $objectId)->update(['priority' => 3]);
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Tasks::where('priority', '!=', 3)->find($itemId)) {
+                    continue;
                 }
+
+                $item->update(['priority' => 3]);
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.priority'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 
     public function onRemovetasks()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Tasks::where('id', $objectId)->count() == 1) {
-                    Tasks::where('id', $objectId)->delete();
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Tasks::find($itemId)) {
+                    continue;
                 }
+
+                $item->delete();
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.remove'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 }

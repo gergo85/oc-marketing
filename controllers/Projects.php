@@ -76,51 +76,57 @@ class Projects extends Controller
             Flash::success(Lang::get('indikator.marketing::lang.flash.report'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 
     public function onActivateProjects()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Projects::where('id', $objectId)->where('status', 2)->count() == 1) {
-                    Projects::where('id', $objectId)->update(['status' => 1]);
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Projects::where('status', 2)->find($itemId)) {
+                    continue;
                 }
+
+                $item->update(['status' => 1]);
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.activate'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 
     public function onDeactivateProjects()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Projects::where('id', $objectId)->where('status', 1)->count() == 1) {
-                    Projects::where('id', $objectId)->update(['status' => 2]);
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Projects::where('status', 1)->find($itemId)) {
+                    continue;
                 }
+
+                $item->update(['status' => 2]);
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.deactivate'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 
     public function onRemoveProjects()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-            foreach ($checkedIds as $objectId) {
-                if (Projects::where('id', $objectId)->count() == 1) {
-                    Projects::where('id', $objectId)->delete();
+            foreach ($checkedIds as $itemId) {
+                if (!$item = Projects::find($itemId)) {
+                    continue;
                 }
+
+                $item->delete();
             }
 
             Flash::success(Lang::get('indikator.marketing::lang.flash.remove'));
         }
 
-        return $this->listRefresh('manage');
+        return $this->listRefresh();
     }
 }
