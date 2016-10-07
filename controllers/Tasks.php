@@ -118,7 +118,7 @@ class Tasks extends Controller
         return $this->listRefresh();
     }
 
-    public function onRemovetasks()
+    public function onRemoveTasks()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $itemId) {

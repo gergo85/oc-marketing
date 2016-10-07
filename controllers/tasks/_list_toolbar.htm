@@ -11,12 +11,12 @@
             onclick="$(this).data('request-data', {
                 checked: $('.control-list').listWidget('getChecked')
             })"
-            data-request="onActivateTasks"
+            data-request="onCompleted"
             data-trigger-action="enable"
             data-trigger=".control-list input[type=checkbox]"
             data-trigger-condition="checked"
             data-stripe-load-indicator>
-            <?= e(trans('indikator.marketing::lang.button.activate')) ?>
+            <?= e(trans('indikator.marketing::lang.button.completed')) ?>
         </button>
         <button
             class="btn btn-default oc-icon-times"
@@ -24,12 +24,12 @@
             onclick="$(this).data('request-data', {
                 checked: $('.control-list').listWidget('getChecked')
             })"
-            data-request="onDeactivateTasks"
+            data-request="onUncompleted"
             data-trigger-action="enable"
             data-trigger=".control-list input[type=checkbox]"
             data-trigger-condition="checked"
             data-stripe-load-indicator>
-            <?= e(trans('indikator.marketing::lang.button.deactivate')) ?>
+            <?= e(trans('indikator.marketing::lang.button.uncompleted')) ?>
         </button>
     </div>
     <button
