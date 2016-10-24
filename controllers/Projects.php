@@ -36,12 +36,12 @@ class Projects extends Controller
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
             foreach ($checkedIds as $objectId) {
-                if (Projects::where('id', $objectId)->count() == 1) {
+                if (Projects::whereId($objectId)->count() == 1) {
                     global $client;
                     $ads = $posts = '';
 
-                    $project = Projects::where('id', $objectId)->first();
-                    $client = Clients::where('id', $project->client_id)->first();
+                    $project = Projects::whereId($objectId)->first();
+                    $client = Clients::whereId($project->client_id)->first();
 
                     $preferences = UserPreferences::forUser()->get('backend::backend.preferences');
                     if (!File::exists('plugins/indikator/marketing/views/mail/report_'.$preferences['locale'].'.htm')) {
