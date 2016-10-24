@@ -4,6 +4,7 @@
         class="btn btn-primary oc-icon-plus">
         <?= e(trans('indikator.marketing::lang.new.projects')) ?>
     </a>
+    <?php if (Indikator\Marketing\Models\Projects::count() > 0): ?>
     <button
         class="btn btn-default oc-icon-paper-plane"
         disabled="disabled"
@@ -59,4 +60,5 @@
         data-stripe-load-indicator>
         <?= e(trans('system::lang.plugins.remove')) ?>
     </button>
+    <?php endif ?>
 </div>

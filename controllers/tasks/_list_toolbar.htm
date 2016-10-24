@@ -4,6 +4,7 @@
         class="btn btn-primary oc-icon-plus">
         <?= e(trans('indikator.marketing::lang.new.tasks')) ?>
     </a>
+    <?php if (Indikator\Marketing\Models\Tasks::count() > 0): ?>
     <div class="btn-group">
         <button
             class="btn btn-default oc-icon-check"
@@ -46,4 +47,5 @@
         data-stripe-load-indicator>
         <?= e(trans('system::lang.plugins.remove')) ?>
     </button>
+    <?php endif ?>
 </div>
