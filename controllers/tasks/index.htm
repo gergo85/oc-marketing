@@ -2,9 +2,9 @@
     <ul>
         <li><?= e(trans('indikator.marketing::lang.menu.tasks')) ?></li>
         <li>
-            <span class="text-info"><strong><?= DB::table('marketing_tasks')->where('status', 2)->count() ?></strong> <?= e(trans('indikator.marketing::lang.button.completed')) ?></span>
+            <span class="text-info"><strong><?= Indikator\Marketing\Models\Tasks::where('status', 2)->count() ?></strong> <?= e(trans('indikator.marketing::lang.button.completed')) ?></span>
             &nbsp; | &nbsp;
-            <span class="text-danger"><strong><?= DB::table('marketing_tasks')->where('status', 1)->count() ?></strong> <?= e(trans('indikator.marketing::lang.button.uncompleted')) ?></span>
+            <span class="text-danger"><strong><?= Indikator\Marketing\Models\Tasks::where('status', 1)->count() ?></strong> <?= e(trans('indikator.marketing::lang.button.uncompleted')) ?></span>
         </li>
     </ul>
 <?php Block::endPut() ?>

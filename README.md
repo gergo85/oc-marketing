@@ -1,5 +1,5 @@
 # Marketing Manager plugin
-Manage marketing activities of your clients. It is only backend plugin.
+Manage marketing activities of your clients.
 
 ## Main features
 * Managing tasks
