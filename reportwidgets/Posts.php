@@ -2,7 +2,6 @@
 
 use Backend\Classes\ReportWidgetBase;
 use Exception;
-use DB;
 
 class Posts extends ReportWidgetBase
 {
@@ -47,8 +46,9 @@ class Posts extends ReportWidgetBase
     }
 
     protected function loadData()
-    {        $this->vars['active'] = DB::table('marketing_posts')->where('status', 1)->count();
-        $this->vars['inactive'] = DB::table('marketing_posts')->where('status', 2)->count();
+    {
+        $this->vars['active'] = Indikator\Marketing\Models\Posts::where('status', 1)->count();
+        $this->vars['inactive'] = Indikator\Marketing\Models\Posts::where('status', 2)->count();
         $this->vars['total'] = $this->vars['active'] + $this->vars['inactive'];
     }
 }

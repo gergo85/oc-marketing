@@ -2,7 +2,6 @@
 
 use Backend\Classes\ReportWidgetBase;
 use Exception;
-use DB;
 
 class Clients extends ReportWidgetBase
 {
@@ -38,6 +37,6 @@ class Clients extends ReportWidgetBase
 
     protected function loadData()
     {
-        $this->vars['total'] = DB::table('marketing_clients')->count();
+        $this->vars['total'] = Indikator\Marketing\Models\Clients::count();
     }
 }

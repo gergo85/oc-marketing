@@ -2,7 +2,6 @@
 
 use Backend\Classes\ReportWidgetBase;
 use Exception;
-use DB;
 
 class Ads extends ReportWidgetBase
 {
@@ -48,8 +47,8 @@ class Ads extends ReportWidgetBase
 
     protected function loadData()
     {
-        $this->vars['active'] = DB::table('marketing_ads')->where('status', 1)->count();
-        $this->vars['inactive'] = DB::table('marketing_ads')->where('status', 2)->count();
+        $this->vars['active'] = Indikator\Marketing\Models\Ads::where('status', 1)->count();
+        $this->vars['inactive'] = Indikator\Marketing\Models\Ads::where('status', 2)->count();
         $this->vars['total'] = $this->vars['active'] + $this->vars['inactive'];
     }
 }
