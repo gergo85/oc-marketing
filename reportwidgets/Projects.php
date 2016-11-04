@@ -47,8 +47,8 @@ class Projects extends ReportWidgetBase
 
     protected function loadData()
     {
-        $this->vars['active'] = Indikator\Marketing\Models\Projects::where('status', 1)->count();
-        $this->vars['inactive'] = Indikator\Marketing\Models\Projects::where('status', 2)->count();
+        $this->vars['active'] = \Indikator\Marketing\Models\Projects::where('status', 1)->count();
+        $this->vars['inactive'] = \Indikator\Marketing\Models\Projects::where('status', 2)->count();
         $this->vars['total'] = $this->vars['active'] + $this->vars['inactive'];
     }
 }

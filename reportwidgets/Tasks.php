@@ -55,9 +55,9 @@ class Tasks extends ReportWidgetBase
     {
         $user = BackendAuth::getUser();
 
-        $this->vars['total'] = Indikator\Marketing\Models\Tasks::count();
-        $this->vars['higt'] = Indikator\Marketing\Models\Tasks::where('user_id', $user->id)->where('priority', 1)->count();
-        $this->vars['normal'] = Indikator\Marketing\Models\Tasks::where('user_id', $user->id)->where('priority', 2)->count();
-        $this->vars['low'] = Indikator\Marketing\Models\Tasks::where('user_id', $user->id)->where('priority', 3)->count();
+        $this->vars['total'] = \Indikator\Marketing\Models\Tasks::count();
+        $this->vars['higt'] = \Indikator\Marketing\Models\Tasks::where('user_id', $user->id)->where('priority', 1)->count();
+        $this->vars['normal'] = \Indikator\Marketing\Models\Tasks::where('user_id', $user->id)->where('priority', 2)->count();
+        $this->vars['low'] = \Indikator\Marketing\Models\Tasks::where('user_id', $user->id)->where('priority', 3)->count();
     }
 }

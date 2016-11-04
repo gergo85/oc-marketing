@@ -37,6 +37,6 @@ class Clients extends ReportWidgetBase
 
     protected function loadData()
     {
-        $this->vars['total'] = Indikator\Marketing\Models\Clients::count();
+        $this->vars['total'] = \Indikator\Marketing\Models\Clients::count();
     }
 }
